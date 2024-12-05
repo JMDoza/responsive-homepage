@@ -1,8 +1,10 @@
 :root {
   /* cyan/slate */
-  --main-color: #06b6d4;
+  --main-color: #11a3bd;
   /* --secondary-color: #020617; */
   --secondary-color: white;
+
+  --secondary-text: rgb(83, 83, 83);
 }
 
 html {
@@ -13,6 +15,16 @@ html {
 body {
   background-color: var(--secondary-color);
   margin: 0;
+  height: 100vh;
+  font-family: "Roboto", serif;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
 }
 
 /* HEADER STYLES */
@@ -72,6 +84,7 @@ header {
 }
 
 .about-container > p {
+  color: var(--secondary-text);
   font-size: 2rem;
   margin: 16px 0;
 }
@@ -82,46 +95,59 @@ header {
   gap: 32px;
 }
 
-.social-media-container > i {
+header .social-media-container > i {
   font-size: 2.5rem;
 }
 
 /* MAIN ELEMENT STYLES */
 
+main {
+  margin-bottom: 160px;
+}
+
+main > h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 3rem;
+}
+
 .projects-container {
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .project-item {
-  /* display: grid; */
-  /* grid-template-rows: 2fr 1fr; */
   max-width: 500px;
-  background-color: red;
-  margin: 36px 24px;
+  margin: 36px 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .project-img {
-  background-color: blue;
+  background-color: rgb(114, 100, 203);
+  color: white;
   width: 100%;
-  height: 300px;
+  height: 325px;
   font-size: 3rem;
+
+  display: grid;
   text-align: center;
+  place-items: center;
 }
 
 .project-details {
   height: 200px;
+  margin: 0 24px;
 }
 
 .project-name-container {
   display: flex;
-  margin: 0 24px;
+  margin: 16px 0;
 }
 
 .project-name-container > h2 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
   flex: 1;
 }
 
@@ -131,8 +157,66 @@ header {
   margin-left: 16px;
 }
 
+.project-description {
+  color: var(--secondary-text);
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+/* FOOTER STYLES */
+
+footer {
+  background-color: var(--main-color);
+  color: white;
+}
+
+footer section {
+  display: grid;
+  margin: 0 24px;
+  margin-bottom: 100px;
+}
+
+footer section h1 {
+  margin: 16px;
+  margin-top: 24px;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.contact-description {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+.contact-address,
+.contact-phone-email {
+  font-size: 1.3rem;
+}
+
+footer .social-media-container i {
+  font-size: 3.5rem;
+  color: black;
+}
+
+.footer-portrait {
+  height: 500px;
+}
+
+.footer-portrait > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Tablet styles */
 @media (min-width: 768px) {
+  /* main {
+    margin: 0 24px;
+  }
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  } */
 }
 
 /* Desktop styles */
