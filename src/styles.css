@@ -172,14 +172,15 @@ footer {
 
 footer section {
   display: grid;
-  margin: 0 24px;
+  margin: 0 5%;
   margin-bottom: 100px;
 }
 
 footer section h1 {
-  margin: 16px;
+  width: 100%;
+  margin-bottom: 16px;
   margin-top: 24px;
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 12vw, 3.5rem);
   text-align: center;
 }
 
@@ -190,7 +191,7 @@ footer section h1 {
 
 .contact-address,
 .contact-phone-email {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 5vw, 1.3rem);
 }
 
 footer .social-media-container i {
@@ -211,12 +212,12 @@ footer .social-media-container i {
 
 /* Tablet styles */
 @media (min-width: 768px) {
-  /* main {
-    margin: 0 24px;
+  main {
+    margin: 0 36px;
   }
   .projects-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-  } */
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  }
 }
 
 /* Desktop styles */
